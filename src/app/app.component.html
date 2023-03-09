@@ -1,0 +1,31 @@
+<main>
+    <div>
+        <p>{{ currentPlayer }}</p>
+    </div>
+    <button id="rst" type="button" name="reset" (click)="reset(oStart, $event, l)">Reset</button>
+    <div [class.board]="true">
+        <table>
+            <tr>
+                <td #td00 [class.box]="true" (click)="clicked($event)"></td>
+                <td #td01 [class.box]="true" (click)="clicked($event)"></td>
+                <td #td02 [class.box]="true" (click)="clicked($event)"></td>
+            </tr>
+            <tr>
+                <td #td10 [class.box]="true" (click)="clicked($event)"></td>
+                <td #td11 [class.box]="true" (click)="clicked($event)"></td>
+                <td #td12 [class.box]="true" (click)="clicked($event)"></td>
+            </tr>
+            <tr>
+                <td #td20 [class.box]="true" (click)="clicked($event)"></td>
+                <td #td21 [class.box]="true" (click)="clicked($event)"></td>
+                <td #td22 [class.box]="true" (click)="clicked($event)"></td>
+            </tr>
+        </table>
+        <div [class.line]="true" id="line" #l></div>
+    </div>
+</main>
+<div #oStart [class.overlay-start]="true">
+    <h1>Welcome in TicTacToe!</h1>
+    <button #m1p type="button" name="mode1" (click)="mode(1, oStart)">1 player</button>
+    <button #m2p type="button" name="mode2" (click)="mode(2, oStart)">2 players</button>
+</div>

@@ -1,0 +1,120 @@
+    @import url('https://fonts.googleapis.com/css2?family=Marhey&family=Rubik+Distressed&display=swap');
+    @import url('https://fonts.googleapis.com/css2?family=Patrick+Hand&display=swap');
+    * {
+        padding: 0;
+        margin: 0;
+        box-sizing: border-box;
+        letter-spacing: 3px;
+    }
+    
+    main {
+        width: 100%;
+        text-align: center;
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+    }
+    
+    main p {
+        font-size: 40px;
+        font-family: 'Patrick Hand', cursive;
+        padding: 20px;
+    }
+    
+    table {
+        border-collapse: collapse;
+        font-family: 'Marhey', cursive;
+        font-family: 'Rubik Distressed', cursive;
+        margin-top: 10px;
+    }
+    
+    table td {
+        transition-duration: 0.2s;
+        border: 3px solid white;
+        width: 100px;
+        height: 100px;
+        font-size: 48px;
+    }
+    
+    table td:hover {
+        background-color: rgb(81, 81, 81);
+        transition-duration: 0.2s;
+    }
+    
+    table tr:first-of-type td {
+        border-top: none;
+    }
+    
+    table tr:last-of-type td {
+        border-bottom: none;
+    }
+    
+    table tr td:first-of-type {
+        border-left: none;
+    }
+    
+    table tr td:last-of-type {
+        border-right: none;
+    }
+    
+    .overlay-start {
+        top: 0;
+        bottom: 0;
+        right: 0;
+        left: 0;
+        width: 100%;
+        position: absolute;
+        background-color: black;
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        text-align: center;
+        font-family: 'Patrick Hand', cursive;
+    }
+    
+    .overlay-start h1 {
+        font-size: 52px;
+    }
+    
+    .overlay-start button {
+        width: 20%;
+        align-self: center;
+        padding: 20px;
+        margin: 10px;
+        font-size: 24px;
+        font-family: 'Patrick Hand', cursive;
+    }
+    
+    #rst {
+        display: none;
+        position: absolute;
+        text-align: center;
+        padding: 20px;
+        font-size: 18px;
+        font-family: 'Patrick Hand', cursive;
+        align-self: center;
+        top: 450px;
+    }
+    
+    #line {
+        display: none;
+        border-radius: 50px;
+        background-color: rgb(136, 29, 29);
+        width: 300px;
+        height: 5px;
+        position: relative;
+        top: -250px;
+        left: 10px;
+        animation: 0.5s linear infinite alternate-reverse anim-line;
+        opacity: 70%;
+    }
+    
+    @keyframes anim-line {
+        from {
+            box-shadow: none;
+        }
+        to {
+            box-shadow: 0 0 .2rem rgb(136, 29, 29), 0 0 .2rem rgb(136, 29, 29), 0 0 2rem rgb(136, 29, 29), 0 0 0.8rem rgb(136, 29, 29), 0 0 2.8rem rgb(136, 29, 29), inset 0 0 1.3rem rgb(136, 29, 29);
+        }
+    }
